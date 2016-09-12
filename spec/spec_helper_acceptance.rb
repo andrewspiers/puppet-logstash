@@ -45,11 +45,11 @@ def expect_no_change_from_manifest(manifest)
 end
 
 def http_package_url
-  url_root = 'https://www.download.elastic.co/logstash/logstash/packages'
+  url_root = 'https://download.elastic.co/logstash/logstash/packages'
 
   case fact('osfamily')
   when 'Debian'
-    "#{url_root}/debian/logstash_#{LS_VERSION}_all.deb"
+    "#{url_root}/debian/logstash-#{LS_VERSION}_all.deb"
   when 'RedHat', 'Suse'
     "#{url_root}/centos/logstash-#{LS_VERSION}.noarch.rpm"
   end
